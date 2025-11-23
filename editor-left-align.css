@@ -1,0 +1,31 @@
+/* Adjustable gap so the text does not touch the sidebar */
+:root {
+  --left-align-content-gap: 3rem;
+}
+
+/* Keep readable line length limit, but align editor content to the left */
+body.is-readable-line-width .markdown-source-view.mod-cm6 .cm-sizer,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
+  max-width: var(--file-line-width, 700px) !important;
+  margin-left: var(--left-align-content-gap, 3rem) !important;
+  margin-right: auto !important;
+  margin-inline-start: var(--left-align-content-gap, 3rem) !important;
+  margin-inline-end: auto !important;
+  justify-content: flex-start !important;
+  display: flex !important;
+}
+
+/* Prevent scroller from recentring the content */
+body.is-readable-line-width .markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-scroller {
+  justify-content: flex-start !important;
+  padding-left: 0 !important;
+}
+
+/* Keep the Things active-line indicator tucked near the text even with the gap */
+body.is-readable-line-width .markdown-source-view.mod-cm6
+  .cm-active:not(.HyperMD-header, .HyperMD-codeblock)::before,
+body.is-readable-line-width .markdown-source-view.mod-cm6
+  .cm-active.HyperMD-quote::before {
+  margin-left: max(0px, calc(var(--left-align-content-gap, 0px) - 0.5rem)) !important;
+}
