@@ -1,30 +1,53 @@
-# Obsidian Editor Left-Align CSS Snippet
+# Obsidian CSS Snippets
 
-A CSS snippet for Obsidian that left-aligns your editor content while maintaining the readable line length setting.
+A collection of CSS snippets for Obsidian that enhance the file explorer and editor experience.
 
-## What This Does
+## Snippets Included
 
-By default, Obsidian centers your content when "Readable line length" is enabled. This snippet keeps the readable line width limit but aligns the content to the left side of the editor, making it easier to use the sidebar and maintaining a more traditional text editor layout.
+### 1. Folder Icons (`folder-icons.css`)
 
-## Features
+Enhances the Obsidian file explorer with visual folder icons while preserving the default collapse/expand chevrons.
 
-- Left-aligns editor content while respecting the readable line width setting
-- Adjustable gap between the sidebar and content (default: 3rem)
-- Compatible with the Things theme's active-line indicator
-- Maintains clean, readable formatting
+**Features:**
+- **Distinct folder icons** - Shows different icons for open and closed folders
+- **Preserves chevrons** - Keeps the default collapse/expand chevron functionality intact
+- **Active path highlighting** - Highlights the entire folder path of the currently active note in your theme's accent color
+- **Active file highlighting** - Highlights the currently active file text in the accent color
+- **Icon color sync** - Folder icons change to accent color on hover and for active paths
+- **Indentation guide styling** - Active folder paths display custom indentation guide colors
 
-## Installation
+**Installation:**
+1. Download `folder-icons.css` from this repository
+2. Open your Obsidian vault folder
+3. Navigate to `.obsidian/snippets/` (create the `snippets` folder if it doesn't exist)
+4. Place the `folder-icons.css` file in the snippets folder
+5. In Obsidian, go to Settings → Appearance → CSS snippets
+6. Find "folder-icons" in the list and toggle it on
 
-1. Download the `editor-left-align.css` file from this repository
+### 2. Editor Left-Align (`editor-left-align.css`)
+
+Left-aligns your editor content while maintaining the readable line length setting.
+
+**Features:**
+- **Left-aligned content** - Aligns editor content to the left while respecting the readable line width setting
+- **Adjustable gap** - Customizable spacing between the sidebar and content (default: 3rem)
+- **Theme compatibility** - Special support for the Things theme's active-line indicator
+- **Clean formatting** - Maintains readable, professional appearance
+
+**Installation:**
+1. Download `editor-left-align.css` from this repository
 2. Open your Obsidian vault folder
 3. Navigate to `.obsidian/snippets/` (create the `snippets` folder if it doesn't exist)
 4. Place the `editor-left-align.css` file in the snippets folder
 5. In Obsidian, go to Settings → Appearance → CSS snippets
 6. Find "editor-left-align" in the list and toggle it on
 
-## Customization
+**Requirements:**
+- "Readable line length" setting enabled in Settings → Editor
 
-You can adjust the gap between your sidebar and content by modifying the CSS variable in the snippet:
+**Customization:**
+
+You can adjust the gap between your sidebar and content by modifying the CSS variable:
 
 ```css
 :root {
@@ -37,16 +60,12 @@ Common values:
 - `3rem` - Default, balanced spacing
 - `4rem` - Larger gap for wider screens
 
-## Requirements
-
-- Obsidian (any recent version)
-- "Readable line length" setting enabled in Settings → Editor
-
 ## Compatibility
 
-This snippet has been tested with:
+These snippets have been tested with:
 - Default Obsidian theme
-- Things theme (includes special support for active-line indicator)
+- Things theme
+- Prism theme
 
 If you encounter issues with other themes, please open an issue.
 
@@ -60,13 +79,3 @@ Found a bug or have a suggestion? Feel free to:
 
 MIT License - feel free to use, modify, and share.
 
-## Author
-
-Created for the Obsidian community.
-
-## Support
-
-If you find this snippet helpful, consider:
-- Starring this repository
-- Sharing it with other Obsidian users
-- Reporting any issues you encounter
