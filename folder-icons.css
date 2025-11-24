@@ -39,3 +39,25 @@
 .nav-folder-title:hover .collapse-icon svg.svg-icon {
     background-color: var(--interactive-accent);
 }
+
+/* Active Path Highlighting */
+.nav-folder:has(.nav-file-title.is-active)>.nav-folder-title {
+    color: var(--interactive-accent);
+}
+
+.nav-folder:has(.nav-file-title.is-active)>.nav-folder-title .collapse-icon svg.svg-icon {
+    background-color: var(--interactive-accent);
+}
+
+.nav-folder:has(.nav-file-title.is-active) {
+    --nav-indentation-guide-color: var(--interactive-accent);
+}
+
+.nav-folder:not(:has(.nav-file-title.is-active)) {
+    --nav-indentation-guide-color: var(--background-modifier-border);
+}
+
+/* Active File Text Highlighting */
+.nav-file-title.is-active {
+    color: var(--interactive-accent);
+}
